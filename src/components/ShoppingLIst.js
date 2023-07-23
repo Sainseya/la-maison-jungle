@@ -9,11 +9,7 @@ import PlantItem from '../components/PlantItem.js';
 
 function ShoppingList() {
     const uniqueCategories = uniq(plantList.map(e => e.category)) // La méthode uniq() permet d'afficher une liste d'élément unique (On supprime les doublons) 
-
-    function handleSubmit(e){
-        e.preventDefault()
-        alert(e.target['my_input'].value)
-    }
+        
     return (
         <div>
             <ul>
@@ -23,7 +19,7 @@ function ShoppingList() {
             </ul>
 
             <ul className='lmj-plant-list'>
-                {plantList.map(({id, cover, light, name, water, isBestSale, isSpecialOffer}) => (
+                {plantList.map(({id, cover, light, name, water}) => (
                     <li key={id}>
                         <PlantItem id={id} name={name} cover={cover} water={water} light={light} />
                 </li>
@@ -31,11 +27,6 @@ function ShoppingList() {
 
 
             </ul>
-
-            <form onSubmit={handleSubmit}>
-                <input type='text' name='my_input' defaultValue='Tape tonn text'/>
-                <button type='submit'>Entrer</button>
-            </form>
         </div>
     )
 }

@@ -1,6 +1,8 @@
 import '../styles/Cart.css'
+import { useState } from 'react';
 
 function Cart() {
+    const [x, updateCart] = useState(null)
 
     const cart = {
         "Monstera": 10,
@@ -26,6 +28,7 @@ function Cart() {
                     </li>
                 ))}
             </ul>
+            <button onClick={() => updateCart}>Ajouter</button>
             Total : {total()}$
         </div>
     );
