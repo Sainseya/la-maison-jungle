@@ -12,16 +12,21 @@ function ShoppingList() {
         
     return (
         <div>
-            <ul>
+            {/* <ul>
                 {uniqueCategories.map((category) => (
                     <li key={category}>{category}</li>
                 ))}
-            </ul>
-
+            </ul> */}
             <ul className='lmj-plant-list'>
                 {plantList.map(({id, cover, light, name, water}) => (
                     <li key={id}>
-                        <PlantItem id={id} name={name} cover={cover} water={water} light={light} />
+                        <PlantItem 
+                            id={id}
+                            name={name}
+                            cover={cover}
+                            water={water}
+                            light={light} 
+                        />
                 </li>
                 ))}
 
