@@ -9,7 +9,7 @@ function Banner(){
         <div className="lmj-banner">
             <img src={logo} alt={title} className='lmj-logo' />
             <h1>{title}</h1>
-            {month  && <div>djnvlqjenj</div>}
+            {month  && <div></div>}
         </div>
         </div>
 
