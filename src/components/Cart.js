@@ -9,6 +9,7 @@ function Cart({ cart, updateCart }) {
       <button className='lmj-cart-toggle-button' onClick={() => setIsOpen(false)}>fermer</button>
       
       <h2>Panier</h2>
+
       <ul> 
         {cart.map(({ name, price, amount }, index) => (
           <li key={`${name}-${index}`}>
@@ -16,6 +17,11 @@ function Cart({ cart, updateCart }) {
           </li>
         ))}
       </ul>
+
+      <div>
+        Total : {cart.reduce((acc, val) => acc + (val.price * val.amount),0)} $
+
+      </div>
 
       <button className='lmj-cart-toggle-button' 
         onClick={() => updateCart([])}> 
