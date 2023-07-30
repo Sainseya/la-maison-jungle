@@ -3,7 +3,6 @@ import '../styles/ShoppingList.css'
 import './CareScale.js'
 import '../components/Categories.js'
 import PlantItem from './PlantItem.js';
-import React from 'react';
 import Categories from '../components/Categories.js';
 import { useState } from 'react';
 
@@ -21,11 +20,6 @@ function ShoppingList({cart,updateCart}) {
         }else{updateCart([...cart, {name, price, amount: 1}])}
     }
 
-    function hide(){
-        if(true){
-            plantList.pop(PlantItem.name)
-        }
-    }
     
     return (
         <div>
@@ -35,7 +29,6 @@ function ShoppingList({cart,updateCart}) {
             (plantList
               .map(({ id, cover, light, name, water, price, category }, index) => (
                 <div key={`${id}-${index}`}>
-                  <button onClick={() => hide(false)}>hide</button>
                   <PlantItem
                     id={id}
                     name={name}
@@ -45,7 +38,8 @@ function ShoppingList({cart,updateCart}) {
                     price={price}
                     category={category}
                   />
-                  <button onClick={() => addToCard(name, price)}>Ajouter</button>
+                <button onClick={(e) => e.target.removeEventListener }>hide</button>
+                <button onClick={() => addToCard(name, price)}>Ajouter</button>
                 </div>
               ))): 
               
@@ -53,7 +47,6 @@ function ShoppingList({cart,updateCart}) {
                 .filter((plant) => plant.category === choixDeCategory )
                 .map(({ id, cover, light, name, water, price, category }, index) => (
                   <div key={`${id}-${index}`}>
-                    <button onClick={() => hide(false)}>hide</button>
                     <PlantItem
                       id={id}
                       name={name}

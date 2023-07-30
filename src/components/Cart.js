@@ -1,8 +1,10 @@
 import '../styles/Cart.css';
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 
 function Cart({ cart, updateCart }) {
   const [isOpen, setIsOpen] = useState(true);
+  const total = cart.reduce((acc, val) => acc + (val.price * val.amount),0)
+
 
   return isOpen ? (
     <div className="lmj-cart">
@@ -19,7 +21,7 @@ function Cart({ cart, updateCart }) {
       </ul>
 
       <div>
-        Total : {cart.reduce((acc, val) => acc + (val.price * val.amount),0)} $
+        Total : {total} $ ;
 
       </div>
 
