@@ -15,7 +15,7 @@ function ShoppingList({cart,updateCart}) {
     function addToCard(name, price){
         const currentPlantSaved = cart.find((plant) => plant.name === name) // On cherche si le tableau contient la plante passé en paramètre. 
         if (currentPlantSaved){
-            const cartFIlteredCurrentPlant = cart.filter((plant) => plant.name !== name) // supprime la plante dont le nom correspond à celui passé en paramètre dans la fonction addToCard 
+            const cartFIlteredCurrentPlant = cart.filter((plant) => plant.name !== name) // supprime la plante dont le nom correspond à celui passé en paramètre
             updateCart([...cartFIlteredCurrentPlant,{ name, price , amount: currentPlantSaved.amount +1}])
         }else{updateCart([...cart, {name, price, amount: 1}])}
     }
@@ -38,7 +38,6 @@ function ShoppingList({cart,updateCart}) {
                     price={price}
                     category={category}
                   />
-                <button onClick={(e) => e.target.removeEventListener }>hide</button>
                 <button onClick={() => addToCard(name, price)}>Ajouter</button>
                 </div>
               ))): 

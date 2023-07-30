@@ -2,9 +2,14 @@ import '../styles/Cart.css';
 import React, { useState} from 'react';
 
 function Cart({ cart, updateCart }) {
+  
   const [isOpen, setIsOpen] = useState(true);
-  const total = cart.reduce((acc, val) => acc + (val.price * val.amount),0)
-
+  const total = cart.reduce((acc, val) => acc + (val.price * val.amount),0);
+  
+  function handleRemoveItem(name){
+    const t = cart.filter(e => e.name !== name)
+    updateCart(t)
+  }
 
   return isOpen ? (
     <div className="lmj-cart">
@@ -14,14 +19,19 @@ function Cart({ cart, updateCart }) {
 
       <ul> 
         {cart.map(({ name, price, amount }, index) => (
+          <div>
           <li key={`${name}-${index}`}>
             {name} {price}€ x {amount}
+            <button className='lmj-cart-toggle-remove-button' onClick={() => handleRemoveItem(name)} >⤱</button>
+
           </li>
+          </div>
+
         ))}
       </ul>
 
       <div>
-        Total : {total} $ ;
+        Total : {total} € ;
 
       </div>
 

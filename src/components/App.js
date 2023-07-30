@@ -16,8 +16,7 @@ function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log("toto")
+    localStorage.setItem('cart', JSON.stringify(cart)); // Json;stringfy transforme le js en un objet Json
   })
 
   return(
