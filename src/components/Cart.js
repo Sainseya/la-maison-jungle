@@ -19,14 +19,12 @@ function Cart({ cart, updateCart }) {
 
       <ul> 
         {cart.map(({ name, price, amount }, index) => (
-          <div>
-          <li key={`${name}-${index}`}>
+          <div className='lmj-cart-list'>
+            <li key={`${name}-${index}`}>
             {name} {price}€ x {amount}
             <button className='lmj-cart-toggle-remove-button' onClick={() => handleRemoveItem(name)} >⤱</button>
-
-          </li>
+            </li>
           </div>
-
         ))}
       </ul>
 

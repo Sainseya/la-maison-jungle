@@ -1,3 +1,12 @@
+# La maison jungle.
+
+![Image de](/src/assets/imageDuSite.png)
+
+Ce projet avait pour but d'apprendre les bases de React. J'ai appris à :
+- Comprendre le fonctionnement de React.
+- Créer une application React complète avec Create React App.
+- Stoker et récupérer des données avec le state et les effets.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
