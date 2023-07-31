@@ -1,6 +1,6 @@
 # La maison jungle.
 
-[Image du site](/src/assets/imageDuSite.png)
+![Image du site](/src/assets/imageDuSite.png)
 
 This project aimed to learn the basics of React. I learned:
 
