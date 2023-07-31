@@ -1,4 +1,4 @@
-# La maison jungle.
+# La maison jungle
 
 ![Image du site](/src/assets/imageDuSite.png)
 
