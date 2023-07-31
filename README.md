@@ -1,11 +1,12 @@
 # La maison jungle.
 
-![Image de](/src/assets/imageDuSite.png)
+(/src/assets/imageDuSite.png)
 
-Ce projet avait pour but d'apprendre les bases de React. J'ai appris à :
-- Comprendre le fonctionnement de React.
-- Créer une application React complète avec Create React App.
-- Stoker et récupérer des données avec le state et les effets.
+This project aimed to learn the basics of React. I learned:
+
+    - Understanding how React works.
+    - Creating a complete React application with Create React App.
+    - Storing and retrieving data using state and effects.
 
 # Getting Started with Create React App
 
